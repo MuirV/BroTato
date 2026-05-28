@@ -54,6 +54,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [Vector2(0.8, 0.8)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Visuals/Shadow:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_gic7v"]
 resource_name = "die"
@@ -126,27 +138,27 @@ tracks/0/keys = {
 }
 tracks/1/type = "value"
 tracks/1/imported = false
-tracks/1/enabled = false
-tracks/1/path = NodePath("Visuals/Sprite:position")
+tracks/1/enabled = true
+tracks/1/path = NodePath("Visuals/Sprite:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": []
+"values": [0.0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
-tracks/2/enabled = false
-tracks/2/path = NodePath("Visuals/Sprite:rotation")
+tracks/2/enabled = true
+tracks/2/path = NodePath("Visuals/Shadow:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": []
+"values": [Vector2(0, -4)]
 }
 
 [sub_resource type="Animation" id="Animation_ruro2"]
