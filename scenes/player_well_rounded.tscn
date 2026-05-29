@@ -2,6 +2,21 @@
 
 [ext_resource type="PackedScene" uid="uid://d4j0tytm3yyip" path="res://scenes/unit.tscn" id="1_lhenu"]
 [ext_resource type="Script" uid="uid://dq73roi3uxyi1" path="res://scenes/player.gd" id="2_g8n7m"]
+[ext_resource type="Texture2D" uid="uid://cproxhccob85g" path="res://assets/sprites/Players/Player_1.png" id="3_e37wi"]
+[ext_resource type="Script" uid="uid://d3624b7b6kysj" path="res://resources/units/unit_stats.gd" id="4_bskgb"]
+
+[sub_resource type="Resource" id="Resource_ysheb"]
+script = ExtResource("4_bskgb")
+name = "Well Rounded"
+icon = ExtResource("3_e37wi")
+health = 15
+health_increase_per_wave = 0.0
+damage = 3
+damage_increase_per_wave = 0.0
+luck = 5.0
+block_chance = 1.0
+gold_drop = 0
+metadata/_custom_type_script = "uid://d3624b7b6kysj"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e37wi"]
 radius = 28.01785
@@ -11,6 +26,11 @@ script = ExtResource("2_g8n7m")
 dash_duration = 0.4
 dash_speed_multi = 3.0
 dash_cooldown = 0.8
+stats = SubResource("Resource_ysheb")
+
+[node name="Line2D" type="Line2D" parent="Visuals" parent_id_path=PackedInt32Array(406842377) index="0" unique_id=990027256]
+position = Vector2(0, -58)
+points = PackedVector2Array(0, 0, -128, 0)
 
 [node name="CollisionShape2D" parent="." index="1" unique_id=543919007]
 position = Vector2(0, -29)
