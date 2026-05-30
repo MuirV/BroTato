@@ -223,7 +223,7 @@ _data = {
 &"move": SubResource("Animation_ruro2")
 }
 
-[node name="Unit" type="Node2D" unique_id=483276139]
+[node name="Unit" type="Area2D" unique_id=1169015049]
 script = ExtResource("1_1jvru")
 
 [node name="Visuals" type="Node2D" parent="." unique_id=406842377]
