@@ -11,15 +11,25 @@ config_version=5
 [application]
 
 config/name="TomatoBro"
-run/main_scene="uid://bb6780pirtwba"
+run/main_scene="uid://cbd4omvxc2y1w"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*uid://bk0en3bjfrk3t"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
+
+[file_customization]
+
+folder_colors={
+"res://scenes/": "green"
+}
 
 [input]
 

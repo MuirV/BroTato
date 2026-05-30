@@ -42,6 +42,7 @@ width = 50.0
 width_curve = SubResource("Curve_e37wi")
 script = ExtResource("5_bskgb")
 player = NodePath("../..")
+trail_duration = 1.2
 
 [node name="Sprite" parent="Visuals" parent_id_path=PackedInt32Array(406842377) index="2" unique_id=716841816]
 z_index = 1
