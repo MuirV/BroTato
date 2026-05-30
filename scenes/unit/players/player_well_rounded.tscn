@@ -27,6 +27,7 @@ point_count = 2
 radius = 28.01785
 
 [node name="PlayerWellRounded" unique_id=483276139 instance=ExtResource("1_lhenu")]
+collision_mask = 2
 script = ExtResource("2_g8n7m")
 dash_duration = 0.4
 dash_speed_multi = 3.0
