@@ -10,7 +10,7 @@ func setup(value: String, color: Color) -> void:
 	
 	rotation = deg_to_rad(randf_range(-10, 10))
 	var random_scale := randf_range(0.8, 1.6)
-	
+	#parallel  并行执行。
 	var tween := create_tween()
 	
 	tween.parallel().tween_property(self, "scale", random_scale * Vector2.ONE, 0.4)
