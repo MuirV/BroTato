@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d31g1dpo4clyd" path="res://scenes/unit.gd" id="1_1jvru"]
 [ext_resource type="Texture2D" uid="uid://devt2xbk78rej" path="res://assets/sprites/shadow.png" id="1_k673f"]
+[ext_resource type="PackedScene" uid="uid://48qtd6uva6hg" path="res://scenes/component/hurtbox_component.tscn" id="3_vh40f"]
 
 [sub_resource type="Animation" id="Animation_k673f"]
 length = 0.001
@@ -243,3 +244,5 @@ position = Vector2(1, -62)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1382886072]
 libraries/ = SubResource("AnimationLibrary_e8hdl")
 autoplay = &"idle"
+
+[node name="HurtboxComponent" parent="." unique_id=108175576 instance=ExtResource("3_vh40f")]

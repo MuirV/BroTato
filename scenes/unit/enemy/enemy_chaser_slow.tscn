@@ -4,12 +4,16 @@
 [ext_resource type="Script" uid="uid://3p2g7x1oot30" path="res://scenes/unit/enemy/enemy.gd" id="2_lmqbh"]
 [ext_resource type="Texture2D" uid="uid://d1ou504pylric" path="res://assets/sprites/Enemies/Enemy_1.png" id="2_oo7ju"]
 [ext_resource type="Resource" uid="uid://orpaynyd6we7" path="res://resources/units/enemies/stats_enemy_chaser_slow.tres" id="3_lmqbh"]
+[ext_resource type="PackedScene" uid="uid://c2bl7bbwtboo0" path="res://scenes/component/hitbox_component.tscn" id="5_e15k4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e15k4"]
-radius = 25.0
+radius = 4.1231055
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lmqbh"]
 radius = 150.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_421q1"]
+radius = 42.0
 
 [node name="EnemyChaserSlow" unique_id=1169015049 instance=ExtResource("1_dd0vi")]
 collision_layer = 2
@@ -32,3 +36,12 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="VisionArea" index="0" unique_id=168255886]
 position = Vector2(0, -24)
 shape = SubResource("CircleShape2D_lmqbh")
+
+[node name="HitboxComponent" parent="." index="5" unique_id=2047442750 instance=ExtResource("5_e15k4")]
+collision_layer = 4
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent" index="0" unique_id=404047771]
+position = Vector2(0, -31)
+shape = SubResource("CircleShape2D_421q1")
+debug_color = Color(0.969976, 0.08433009, 0.37372178, 0.41960785)

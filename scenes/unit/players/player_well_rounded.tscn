@@ -24,7 +24,10 @@ _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e37wi"]
-radius = 28.01785
+radius = 3.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ht2l1"]
+radius = 32.0
 
 [node name="PlayerWellRounded" unique_id=483276139 instance=ExtResource("1_lhenu")]
 collision_mask = 2
@@ -50,7 +53,7 @@ z_index = 1
 texture = ExtResource("3_e37wi")
 
 [node name="CollisionShape2D" parent="." index="1" unique_id=543919007]
-visible = false
+z_index = 1
 position = Vector2(0, -29)
 shape = SubResource("CircleShape2D_e37wi")
 
@@ -63,6 +66,15 @@ one_shot = true
 [node name="TrailTimer" type="Timer" parent="." index="5" unique_id=1357735506]
 unique_name_in_owner = true
 one_shot = true
+
+[node name="HurtboxComponent" parent="." index="6" unique_id=108175576]
+collision_layer = 32
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxComponent" index="0" unique_id=1538609713]
+z_index = 1
+position = Vector2(0, -32)
+shape = SubResource("CircleShape2D_ht2l1")
 
 [connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="TrailTimer" to="Visuals/Trail" method="_on_trail_timer_timeout"]
