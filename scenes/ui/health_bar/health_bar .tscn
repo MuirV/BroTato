@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bc6s2jff2qwuv"]
 
-[ext_resource type="Script" uid="uid://cy1qcyub2ag3j" path="res://scenes/ui/ui/health_bar_.gd" id="1_myb7t"]
+[ext_resource type="Script" uid="uid://cy1qcyub2ag3j" path="res://scenes/ui/health_bar/health_bar_.gd" id="1_myb7t"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_drkrc"]
 bg_color = Color(0.13725491, 0.019607844, 0.02745098, 1)
@@ -11,15 +11,15 @@ corner_radius_bottom_left = 9
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_myb7t"]
 bg_color = Color(1, 0.2901961, 0.45490196, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
 border_color = Color(0.13725491, 0.019607844, 0.02745098, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [node name="HealthBar" type="Control" unique_id=269316549]
 custom_minimum_size = Vector2(96, 20)
