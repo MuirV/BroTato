@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://d31g1dpo4clyd" path="res://scenes/unit.gd" id="1_1jvru"]
 [ext_resource type="Texture2D" uid="uid://devt2xbk78rej" path="res://assets/sprites/shadow.png" id="1_k673f"]
-[ext_resource type="Texture2D" uid="uid://cproxhccob85g" path="res://assets/sprites/Players/Player_1.png" id="2_1jvru"]
 
 [sub_resource type="Animation" id="Animation_k673f"]
 length = 0.001
@@ -238,7 +237,6 @@ texture = ExtResource("1_k673f")
 [node name="Sprite" type="Sprite2D" parent="Visuals" unique_id=716841816]
 unique_name_in_owner = true
 position = Vector2(1, -62)
-texture = ExtResource("2_1jvru")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=543919007]
 
