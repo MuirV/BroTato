@@ -6,12 +6,16 @@ class_name Unit
 @onready var visuals: Node2D = %Visuals
 @onready var sprite: Sprite2D = %Sprite
 @onready var anim_player: AnimationPlayer = $AnimationPlayer
+@onready var health_component: HealthComponent = $HealthComponent
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	health_component.setup(stats)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_hurtbox_component_on_damaged(hitbox: HitboxComponent) -> void:
+	if health_component.current_health <= 0:
+		return
+	
+	health_component.take_damage(hitbox.damage)
+	print("%s: %d" % [name, health_component.current_health])
