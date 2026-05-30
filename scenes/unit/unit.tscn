@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://devt2xbk78rej" path="res://assets/sprites/shadow.png" id="1_k673f"]
 [ext_resource type="PackedScene" uid="uid://48qtd6uva6hg" path="res://scenes/component/hurtbox_component.tscn" id="3_vh40f"]
 [ext_resource type="PackedScene" uid="uid://dscc06uuc5eh2" path="res://scenes/component/health_component.tscn" id="4_bhlit"]
+[ext_resource type="PackedScene" uid="uid://bc6s2jff2qwuv" path="res://scenes/ui/ui/health_bar .tscn" id="5_vgvef"]
 
 [sub_resource type="Animation" id="Animation_k673f"]
 length = 0.001
@@ -250,4 +251,11 @@ autoplay = &"idle"
 
 [node name="HealthComponent" parent="." unique_id=337383608 instance=ExtResource("4_bhlit")]
 
+[node name="HealthBar" parent="." unique_id=269316549 instance=ExtResource("5_vgvef")]
+offset_left = -47.0
+offset_top = -90.0
+offset_right = 49.0
+offset_bottom = -70.0
+
 [connection signal="on_damaged" from="HurtboxComponent" to="." method="_on_hurtbox_component_on_damaged"]
+[connection signal="on_health_changed" from="HealthComponent" to="HealthBar" method="_on_health_component_on_health_changed"]
