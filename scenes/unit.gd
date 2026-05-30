@@ -1,6 +1,6 @@
 extends Node2D
 class_name Unit
-
+#Unit继承自UnitStats,里面包含角色属性枚举（生命、移速、幸运等）
 @export var stats: UnitStats
 
 @onready var visuals: Node2D = %Visuals

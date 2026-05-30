@@ -27,6 +27,8 @@ func _process(delta: float) -> void:
 		current_velocity *= dash_speed_multi
 	
 	position += current_velocity * delta
+	position.x = clamp(position.x, -1000, 1000)
+	position.y = clamp(position.y, -500, 500)
 	
 	if can_dash():
 		start_dash()
