@@ -21,11 +21,15 @@ func _on_hurtbox_component_on_damaged(hitbox: HitboxComponent) -> void:
 	if health_component.current_health <= 0:
 		return
 	
+	var blocked := Global.get_chance_sucess(stats.block_chance / 100)
+	if blocked:
+		print("Blocked!")
+		return
+		
 	set_flash_material()
-	
 	health_component.take_damage(hitbox.damage)
 	print("%s: %d" % [name, health_component.current_health])
 
-
+#受击结束，取消受击shader应用
 func _on_flash_timer_timeout() -> void:
 	sprite.material = null
